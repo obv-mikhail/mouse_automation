@@ -1,7 +1,14 @@
 # Mouse-Automation
 A winapi wrapper that provides easy mouse automation. Can be used from a variety of languages.
 
-##Functionality
+## Installation
+### Rust
+In progress.
+
+### Other
+Put the dll in your project's directory.
+
+## Functionality
 ### Moving the mouse
 ```Rust
 mouse_automation.move_mouse(mut x: i32, mut y: i32, abs: bool);
