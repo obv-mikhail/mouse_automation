@@ -20,7 +20,7 @@ Python:
 ```Python
 import ctypes
 mouse_automation = ctypes.CDLL('mouse_automation')
-mouse_automation.move_mouse(0, 0, 1)
+mouse_automation.move_mouse(0, 0, 1) #moves mouse to top left corner
 ```
 
 ## Functionality
