@@ -3,7 +3,15 @@ A winapi wrapper that provides easy mouse automation. Can be used from a variety
 
 ## Installation
 ### Rust
-In progress.
+Add this to the toml file:
+```toml
+[dependencies]
+mouse_automation = "0.1.0"
+```
+In your project, import the crate like this:
+```Rust
+extern crate mouse_automation
+```
 
 ### Other
 Put the dll in your project's directory.
