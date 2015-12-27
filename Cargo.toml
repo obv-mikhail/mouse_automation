@@ -1,4 +1,16 @@
 [package]
-name = "Mouse-Automation"
-version = "0.1.0"
-authors = ["obvmi"]
+name = "mouse_automation"
+version = "0.1.1"
+authors = ["obv.mikhail@gmail.com"]
+
+description = "A winapi wrapper that provides easy mouse automation."
+
+documentation = "https://github.com/obv-mikhail/mouse_automation"
+homepage = "https://github.com/obv-mikhail/mouse_automation"
+repository = "https://github.com/obv-mikhail/mouse_automation"
+
+readme = "README.md"
+
+keywords = ["mouse", "automation"]
+
+license = "MIT"
