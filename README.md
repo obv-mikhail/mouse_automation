@@ -14,13 +14,13 @@ extern crate mouse_automation
 ```
 
 ### Other
-Put the dll in your project's directory.
+The dll needs to be in your project's directory.
 
-Python:
+**Python example:**
 ```Python
 import ctypes
 mouse_automation = ctypes.CDLL('mouse_automation')
-mouse_automation.move_mouse(0, 0, 1) #moves mouse to top left corner
+mouse_automation.move_mouse(0, 0, 1) # moves mouse to top left corner
 ```
 
 ## Functionality
