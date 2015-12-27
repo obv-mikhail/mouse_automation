@@ -6,11 +6,15 @@ A winapi wrapper that provides easy mouse automation. Can be used from a variety
 Add this to the toml file:
 ```toml
 [dependencies]
-mouse_automation = "0.1.0"
+mouse_automation = "0.1.1"
 ```
-In your project, import the crate like this:
+Example:
 ```Rust
-extern crate mouse_automation
+extern crate mouse_automation;
+
+fn main() {
+    mouse_automation::move_mouse(0, 0, true); // moves mouse to top left corner
+}
 ```
 
 ### Other
