@@ -14,11 +14,13 @@ mouse_automation.left_down();
 mouse_automation.left_up();
 ```
 
-```mouse_automation.right_down();  
+```
+mouse_automation.right_down();  
 mouse_automation.right_up();
 ```
 
-```mouse_automation.middle_down();  
+```
+mouse_automation.middle_down();  
 mouse_automation.middle_up();
 ```
 
