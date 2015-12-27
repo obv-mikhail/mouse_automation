@@ -8,12 +8,17 @@ First 2 parameters should be i32 values specifying the amount of movement that n
 
 # Simulating a click
 mouse_automation.left_down();
+
 mouse_automation.left_up();
 
+
 mouse_automation.right_down();
+
 mouse_automation.right_up();
 
+
 mouse_automation.middle_down();
+
 mouse_automation.middle_up();
 
 The first function call is used to send a down command, and the second to release the mouse. 
