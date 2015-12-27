@@ -1,4 +1,4 @@
-# Mouse-Automation
+# mouse_automation
 A winapi wrapper that provides easy mouse automation. Can be used from a variety of languages.
 
 ## Installation
