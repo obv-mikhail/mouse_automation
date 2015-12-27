@@ -16,6 +16,13 @@ extern crate mouse_automation
 ### Other
 Put the dll in your project's directory.
 
+Python:
+```Python
+import ctypes
+mouse_automation = ctypes.CDLL('mouse_automation')
+mouse_automation.move_mouse(0, 0, 1)
+```
+
 ## Functionality
 ### Moving the mouse
 ```Rust
