@@ -30,8 +30,8 @@ fn send_input(dx: i32, dy: i32, mouse_data: u32, flags: u32) {
     unsafe {SendInput(1, &mut input, std::mem::size_of::<Input>() as i32);}
 }
 
-//#[no_mangle]
-pub fn move_mouse(mut x: i32, mut y: i32, abs: bool) {
+#[no_mangle]
+pub extern fn move_mouse(mut x: i32, mut y: i32, abs: bool) {
     let mut flags = 0x0001;
     if abs == true {
         x = x*65335/unsafe{GetSystemMetrics(78)};
@@ -41,37 +41,25 @@ pub fn move_mouse(mut x: i32, mut y: i32, abs: bool) {
     send_input(x, y, 0, flags);
 }
 
-//#[no_mangle]
-pub fn left_down() {
-    send_input(0, 0, 0, 0x0002);
+pub struct MouseButton {
+    pub e_down: u32,
+    pub e_up: u32,
 }
 
-//#[no_mangle]
-pub fn left_up() {
-    send_input(0, 0, 0, 0x0004);
+impl MouseButton {
+    pub fn down(&self) {send_input(0, 0, 0, self.e_down)}
+    pub fn up(&self) {send_input(0, 0, 0, self.e_up)}
 }
 
-//#[no_mangle]
-pub fn right_down() {
-    send_input(0, 0, 0, 0x0008);
-}
+const LEFT: MouseButton = MouseButton{e_down: 0x0002, e_up: 0x0004};
+const RIGHT: MouseButton = MouseButton{e_down: 0x0008, e_up: 0x0010};
+const MIDDLE: MouseButton = MouseButton{e_down: 0x0020, e_up: 0x0040};
 
-//#[no_mangle]
-pub fn right_up() {
-    send_input(0, 0, 0, 0x0010);
-}
+#[no_mangle] pub extern fn left_down() {LEFT.down()}
+#[no_mangle] pub extern fn left_up() {LEFT.up()}
+#[no_mangle] pub extern fn right_down() {RIGHT.down()}
+#[no_mangle] pub extern fn right_up() {RIGHT.up()}
+#[no_mangle] pub extern fn middle_down() {MIDDLE.down()}
+#[no_mangle] pub extern fn middle_up() {MIDDLE.up()}
 
-//#[no_mangle]
-pub fn middle_down() {
-    send_input(0, 0, 0, 0x0020);
-}
-
-//#[no_mangle]
-pub fn middle_up() {
-    send_input(0, 0, 0, 0x0040);
-}
-
-//#[no_mangle]
-pub fn wheel(movement: u32) {
-    send_input(0, 0, movement, 0x0800);
-}
+#[no_mangle] pub extern fn wheel(movement: u32) {send_input(0, 0, movement, 0x0800)}
