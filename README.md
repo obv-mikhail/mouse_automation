@@ -8,7 +8,7 @@ Add this to the toml file:
 [dependencies]
 mouse_automation = "0.1.1"
 ```
-Example:
+**Example:**
 ```Rust
 extern crate mouse_automation;
 
@@ -18,8 +18,7 @@ fn main() {
 ```
 
 ### Other
-The dll needs to be in your project's directory.
-
+The dll needs to be in your project's directory. Download from here (working on dll).
 **Python example:**
 ```Python
 import ctypes
