@@ -18,7 +18,7 @@ fn main() {
 ```
 
 ### Other
-The dll needs to be in your project's directory. Download from here (working on dll).
+The dll needs to be in your project's directory. Download from here (working on dll).  
 **Python example:**
 ```Python
 import ctypes
