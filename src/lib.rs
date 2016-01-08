@@ -52,8 +52,8 @@ impl MouseButton {
     pub fn up(&self) {send_input(0, 0, 0, self.e_up)}
 }
 
-const LEFT: MouseButton = MouseButton{e_down: 0x0002, e_up: 0x0004};
-const RIGHT: MouseButton = MouseButton{e_down: 0x0008, e_up: 0x0010};
-const MIDDLE: MouseButton = MouseButton{e_down: 0x0020, e_up: 0x0040};
+pub const LEFT: MouseButton = MouseButton{e_down: 0x0002, e_up: 0x0004};
+pub const RIGHT: MouseButton = MouseButton{e_down: 0x0008, e_up: 0x0010};
+pub const MIDDLE: MouseButton = MouseButton{e_down: 0x0020, e_up: 0x0040};
 
 pub fn wheel(movement: u32) {send_input(0, 0, movement, 0x0800)}
