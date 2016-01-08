@@ -1,6 +1,6 @@
 [package]
 name = "mouse_automation"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["obv.mikhail@gmail.com"]
 
 description = "A winapi wrapper that provides easy mouse automation."
