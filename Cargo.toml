@@ -13,4 +13,4 @@ readme = "README.md"
 
 keywords = ["mouse", "automation"]
 
-license = "MIT"
+license = "MIT OR Apache-2.0"
